@@ -1,0 +1,7 @@
+{
+  "name": "finalBikeProject",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

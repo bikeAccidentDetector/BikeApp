@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>update Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+
+
+
+  <form #updateData="ngForm" (ngSubmit)="updateForm(updateData.form)">
+    <div class="container">
+
+      <p>{{getResponse}}</p>
+
+
+      <label for="firstNumber"><b>Primary Phone Number</b></label>
+      <input type="text" placeholder="+91**********" name="firstNumber" [(ngModel)]="firstNumber" required>
+
+      <label for="lastNumber"><b>Secondary Phone Number</b></label>
+      <input type="text" placeholder="+91**********" name="lastNumber" [(ngModel)]="lastNumber" required>
+
+      <label for="hospitalName"><b>Hospital Name</b></label>
+      <input type="text" placeholder="Enter Hospital Name" name="hospitalName" [(ngModel)]="hospitalName" required>
+
+
+      <label for="hospitalNumber"><b>Hospital Phone Number</b></label>
+      <input type="text" placeholder="+91**********" name="hospitalNumber" [(ngModel)]="hospitalNumber" required>
+
+      <label for="addresss"><b>Enter your address</b></label>
+      <input type="text" placeholder="Enter Your address" name="addresss" [(ngModel)]="addresss" required>
+
+
+
+      <button type="submit" [disabled]="updateData.form.invalid">Update</button>
+    </div>
+
+
+    <br>
+  </form>
+
+
+
+</ion-content>

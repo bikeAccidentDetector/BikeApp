@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- Log Out -->
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" (click)="logOut()">
+    Logout
+  </ion-fab-button>
+</ion-fab>
+
+
+
+
+<ion-content class="ion-padding ion-margin">
+
+
+  <h2>Sorry☹😭</h2>
+  <h3 class="ion-margin ion-padding">Due to unavailability of cell phone, during this lock down developer is unable to
+    apply the code. The phone based
+    codes have been hard coded.
+  </h3>
+
+
+
+  <br><br><br>
+
+
+  <form #accidentData="ngForm" (ngSubmit)="accidentForm(accidentData.form)">
+
+    <label for="FirstName"><b>Gyroscope</b></label>
+    <input type="number" placeholder="number" name="gyro" [(ngModel)]="gyro" required>
+
+    <label for="lastName"><b>Linear Accelerometer</b></label>
+    <input type="number" placeholder="number" name="linear" [(ngModel)]="linear" required>
+
+    <button type="submit" [disabled]="accidentData.form.invalid">Check Accident</button>
+
+  </form>
+
+
+
+  <h3>{{message}}</h3>
+  <P>{{calling}} {{firstNumber}}, {{lastNumber}}</P>
+
+
+</ion-content>

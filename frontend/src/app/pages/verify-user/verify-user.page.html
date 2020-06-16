@@ -1,0 +1,26 @@
+<ion-content>
+
+  <section>
+
+    <h1>Verify Email</h1>
+    <ion-text color="danger">{{getResponse}}</ion-text>
+
+    <form #verifyEmaildata="ngForm" (ngSubmit)="verifyEmailForm(verifyEmaildata.form)">
+
+      <div class="container">
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" [(ngModel)]="email" required>
+
+        <label for="verifyCode"><b>Verify Code</b></label>
+        <input type="text" placeholder="Enter Your Verify Code" name="verifyCode" [(ngModel)]="verifyCode" required>
+
+
+        <button type="submit" [disabled]="verifyEmaildata.form.invalid">Submit</button>
+      </div>
+
+    </form>
+
+
+  </section>
+
+</ion-content>

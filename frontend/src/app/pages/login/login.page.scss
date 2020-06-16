@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
+
+
+ion-content{
+    --ion-background-color:linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
+}
+
+section{
+    background-color: rgba(0, 0, 0 , 0.5);
+    border-radius:20px;
+    margin-top: 20vh;
+    width: 90%;
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+}
+h1{
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2rem;
+}
+
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: black;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:disabled {
+  opacity: 0.3;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+span {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.doNotHaveAccount{
+  float: left;
+}
+.forgotPass{
+  float: right;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.forgotPass, span.doNotHaveAccount {
+     display: block;
+     float: none;
+  }
+}

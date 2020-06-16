@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Your Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<br>
+<ion-content>
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Family contact number:</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Number 1: {{firstNumber}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Number 2: {{lastNumber}}</ion-label>
+    </ion-item>
+
+
+  </ion-list>
+
+  <br><br>
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Hospital:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Name: {{hospitalName}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone Number: {{hospitalNumber}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+
+  <br><br>
+
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Address:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{addresss}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <br>
+  <br>
+
+  <ion-list>
+    <ion-button expand="block" (click)="openUpdatePage()">Update</ion-button>
+  </ion-list>
+
+
+
+</ion-content>
