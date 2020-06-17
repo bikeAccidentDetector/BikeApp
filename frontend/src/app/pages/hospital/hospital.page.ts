@@ -5,6 +5,8 @@ import { Storage } from '@ionic/storage';
 import { ServiceService } from '../../service/service.service';
 
 
+
+
 @Component({
   selector: 'app-hospital',
   templateUrl: './hospital.page.html',
@@ -31,11 +33,24 @@ export class HospitalPage implements OnInit {
   }
 
   ngOnInit() {
+
+    setInterval(() => {
+      this.getinfor();
+    }, 2000);
+
+  }//ngOnLinit
+
+
+
+
+
+  // get post
+  getinfor() {
+    //my code
     this.storage.get('email').then((val) => {
       this.email = val;
 
       let url = this._urlfrom._url + "findAllUserDtails.php?email=" + this.email;
-
 
       this.http.get(url).subscribe((res) => {
         this.firstNumber = res['firstNumber'];
@@ -46,7 +61,14 @@ export class HospitalPage implements OnInit {
       });
     });
 
-  }//ngOnLinit
+
+
+  }
+
+
+
+
+
 
 
   openUpdatePage() {

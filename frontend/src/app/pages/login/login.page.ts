@@ -27,8 +27,15 @@ export class LoginPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.storage.set('s', 'joydey');
-
+    this.storage.get('token').then((val) => {
+      this.token = val;
+      this.storage.get('email').then((res) => {
+        this.email = res;
+        if (this.token != null && this.email != null) {
+          this.router.navigate(['/intro/', this.email]);
+        }
+      });
+    });
   }
 
 

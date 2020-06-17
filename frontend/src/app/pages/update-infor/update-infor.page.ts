@@ -55,7 +55,7 @@ export class UpdateInforPage implements OnInit {
     let url = this._urlfrom._url + "userdetails.php";
 
     this.http.post(url, data).subscribe((res) => {
-      this.location.back();
+      this.router.navigate(['/intro/' + this.email + '/hospital/']);
     });
 
 
